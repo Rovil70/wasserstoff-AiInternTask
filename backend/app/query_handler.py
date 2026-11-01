@@ -62,10 +62,10 @@ Citation: Page X, Para Y
 """
 
         response = client.chat.completions.create(
-            model="llama3-70b-8192",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.3
-        )
+    model="openai/gpt-oss-20b",
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0.3
+)
 
         content = response.choices[0].message.content
         try:
