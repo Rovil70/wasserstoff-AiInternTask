@@ -31,10 +31,10 @@ Give a concise answer.
 """
 
     response = client.chat.completions.create(
-        model="llama3-70b-8192",
-        messages=[{"role": "user", "content": prompt}],
-        temperature=0.3
-    )
+    model="openai/gpt-oss-20b",
+    messages=[{"role": "user", "content": prompt}],
+    temperature=0.3
+) 
     return response.choices[0].message.content
 
 
